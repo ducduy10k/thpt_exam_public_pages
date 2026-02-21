@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xóa tài khoản & dữ liệu - Luyện thi THPT</title>
+    <style>
+      :root {
+        --bg: #f5f8ff;
+        --card: #ffffff;
+        --text: #12223b;
+        --muted: #4a5a74;
+        --primary: #1f4fbf;
+        --line: #dbe5f5;
+        --danger-bg: #fff6f6;
+        --danger-line: #ffd1d1;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+        color: var(--text);
+        line-height: 1.65;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 32px auto;
+        padding: 0 16px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 8px 30px rgba(26, 53, 105, 0.08);
+      }
+      h1 {
+        margin: 0 0 10px;
+        color: var(--primary);
+        font-size: 28px;
+      }
+      h2 {
+        margin: 24px 0 8px;
+        font-size: 20px;
+      }
+      p, li {
+        color: var(--text);
+      }
+      .meta {
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      ul, ol {
+        margin-top: 8px;
+        padding-left: 22px;
+      }
+      .note {
+        margin-top: 12px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: #f7faff;
+      }
+      .warning {
+        margin-top: 12px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--danger-line);
+        background: var(--danger-bg);
+      }
+      .footer {
+        margin-top: 28px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        background: #f2f6ff;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 2px 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <article class="card">
+        <h1>Xóa tài khoản & dữ liệu - Luyện thi THPT</h1>
+        <p class="meta"><strong>Ngày hiệu lực:</strong> 21/02/2026</p>
+        <p class="meta"><strong>Áp dụng cho ứng dụng:</strong> Luyện thi THPT (<code>vn.n2d.thpt_exam_app</code>)</p>
+
+        <p>
+          Trang này hướng dẫn cách <strong>khởi tạo yêu cầu xóa tài khoản (initiate deletion request)</strong>,
+          dữ liệu nào sẽ bị xóa, dữ liệu nào có thể được giữ lại và thời gian xử lý.
+        </p>
+
+        <h2>1. Cách xóa tài khoản ngoài ứng dụng</h2>
+        <ol>
+          <li>
+            Gửi email đến:
+            <a href="mailto:ducduy10k@gmail.com?subject=THPT%20Exam%20-%20Yeu%20cau%20xoa%20tai%20khoan">
+              ducduy10k@gmail.com
+            </a>
+          </li>
+          <li>
+            Tiêu đề email: <code>THPT Exam - Yêu cầu xóa tài khoản</code>
+          </li>
+          <li>
+            Nội dung cần có:
+            <ul>
+              <li>Email đã dùng để đăng ký/đăng nhập ứng dụng.</li>
+              <li>UID tài khoản (nếu có).</li>
+              <li>Mô tả ngắn yêu cầu xóa tài khoản.</li>
+            </ul>
+          </li>
+        </ol>
+        <p class="note">
+          Nếu bạn không nhớ UID, chỉ cần gửi đúng email đăng ký để chúng tôi đối chiếu.
+        </p>
+
+        <h2>2. Cách xóa tài khoản trong ứng dụng (in-app)</h2>
+        <p>
+          Bạn có thể tự xóa trực tiếp trong app theo đường dẫn:
+          <br />
+          <strong>Màn hình chính → Mở menu tài khoản (góc phải trên) → Thông tin tài khoản → Xóa tài khoản</strong>
+        </p>
+        <ul>
+          <li>Hệ thống có thể yêu cầu bạn xác thực lại mật khẩu hoặc đăng nhập lại Google trước khi xóa.</li>
+          <li>Sau khi xác nhận, yêu cầu xóa sẽ được xử lý ngay theo luồng kỹ thuật của ứng dụng.</li>
+        </ul>
+
+        <h2>3. Dữ liệu sẽ bị xóa</h2>
+        <ul>
+          <li>Tài khoản Firebase Authentication: UID, email đăng nhập, tên hiển thị và liên kết nhà cung cấp đăng nhập.</li>
+          <li>Dữ liệu học tập/tài khoản lưu cục bộ trên thiết bị: ảnh đại diện cục bộ, lịch sử làm đề, bookmark từ vựng, lịch sử tìm kiếm từ và tiến độ luyện tập liên quan.</li>
+          <li>Tệp dữ liệu học tập theo UID trên cloud (nếu có), ví dụ: <code>learning_stats/&lt;uid&gt;.json</code>.</li>
+        </ul>
+
+        <h2>4. Dữ liệu có thể được giữ lại và lý do</h2>
+        <ul>
+          <li>Nhật ký hệ thống/bảo mật (log truy cập, log lỗi) có thể được giữ lại trong thời gian giới hạn để chống gian lận, điều tra sự cố và bảo vệ hệ thống.</li>
+          <li>Các bản sao lưu kỹ thuật ngắn hạn có thể còn tồn tại tạm thời trước khi bị ghi đè tự động.</li>
+        </ul>
+        <p class="warning">
+          Chúng tôi không sử dụng dữ liệu đã yêu cầu xóa cho mục đích quảng cáo cá nhân hóa.
+        </p>
+
+        <h2>5. Thời gian xử lý yêu cầu xóa</h2>
+        <ul>
+          <li>Xóa trong ứng dụng: thường xử lý ngay hoặc trong vài phút.</li>
+          <li>Yêu cầu qua email: xử lý trong vòng <strong>07 ngày làm việc</strong>, tối đa <strong>30 ngày</strong> cho các trường hợp cần đối chiếu thêm.</li>
+        </ul>
+
+        <h2>6. Thời gian lưu giữ sau khi xóa (retention)</h2>
+        <ul>
+          <li>Dữ liệu chính bị xóa sẽ không còn truy cập được sau khi xử lý thành công.</li>
+          <li>Bản sao lưu kỹ thuật có thể tồn tại tối đa <strong>30 ngày</strong> trước khi tự động ghi đè/xóa.</li>
+          <li>Nhật ký hệ thống liên quan có thể được giữ tối đa <strong>30 ngày</strong> rồi tự động xóa theo vòng đời vận hành.</li>
+        </ul>
+
+        <h2>7. Liên hệ hỗ trợ</h2>
+        <p>
+          Nếu cần hỗ trợ xác minh yêu cầu xóa dữ liệu:
+          <a href="mailto:ducduy10k@gmail.com">ducduy10k@gmail.com</a>
+        </p>
+
+        <p class="footer">
+          Xem thêm: <a href="privacy_policy_vi.html">Chính sách Quyền riêng tư</a>
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

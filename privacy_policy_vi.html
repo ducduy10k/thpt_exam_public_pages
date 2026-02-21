@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chính sách Quyền riêng tư - Luyện thi THPT</title>
+    <style>
+      :root {
+        --bg: #f5f8ff;
+        --card: #ffffff;
+        --text: #12223b;
+        --muted: #4a5a74;
+        --primary: #1f4fbf;
+        --line: #dbe5f5;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+        color: var(--text);
+        line-height: 1.65;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 32px auto;
+        padding: 0 16px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 8px 30px rgba(26, 53, 105, 0.08);
+      }
+      h1 {
+        margin: 0 0 10px;
+        color: var(--primary);
+        font-size: 28px;
+      }
+      h2 {
+        margin: 24px 0 8px;
+        font-size: 20px;
+      }
+      p, li {
+        color: var(--text);
+      }
+      .meta {
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      ul, ol {
+        margin-top: 8px;
+        padding-left: 22px;
+      }
+      .footer {
+        margin-top: 28px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <article class="card">
+        <h1>Chính sách Quyền riêng tư - Luyện thi THPT</h1>
+        <p class="meta"><strong>Ngày hiệu lực:</strong> 20/02/2026</p>
+        <p class="meta"><strong>Áp dụng cho ứng dụng:</strong> Luyện thi THPT (<code>vn.n2d.thpt_exam_app</code>)</p>
+
+        <p>
+          Chính sách này mô tả cách ứng dụng Luyện thi THPT thu thập, sử dụng,
+          lưu trữ và bảo vệ dữ liệu khi bạn sử dụng ứng dụng.
+        </p>
+
+        <h2>1. Dữ liệu chúng tôi thu thập</h2>
+        <ol>
+          <li>
+            <strong>Dữ liệu tài khoản</strong>
+            <ul>
+              <li>Email, tên hiển thị và ảnh đại diện (khi bạn đăng nhập bằng Email/Google hoặc tự cập nhật hồ sơ).</li>
+              <li>Mã người dùng (UID) từ Firebase Authentication.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dữ liệu học tập trong ứng dụng</strong>
+            <ul>
+              <li>Kết quả bài thi, lịch sử làm bài, cấu hình giao diện và các thiết lập ứng dụng.</li>
+              <li>Dữ liệu này chủ yếu được lưu cục bộ trên thiết bị.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dữ liệu kỹ thuật và bảo mật</strong>
+            <ul>
+              <li>Thông tin cần thiết để xác thực/duy trì phiên đăng nhập (bao gồm đăng nhập ẩn danh).</li>
+              <li>Token bảo mật App Check để chống truy cập trái phép vào dịch vụ Firebase.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dữ liệu quảng cáo</strong>
+            <ul>
+              <li>
+                Ứng dụng sử dụng Google Mobile Ads (AdMob). Google có thể xử lý
+                một số dữ liệu kỹ thuật như mã định danh quảng cáo, địa chỉ IP,
+                thông tin thiết bị để phân phối và đo lường quảng cáo theo chính
+                sách của Google.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dữ liệu khi dùng tính năng AI (nếu được bật)</strong>
+            <ul>
+              <li>Nội dung câu hỏi, đáp án bạn chọn và ngữ cảnh liên quan có thể được gửi tới dịch vụ AI để tạo phần giải thích.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h2>2. Mục đích sử dụng dữ liệu</h2>
+        <ul>
+          <li>Cung cấp chức năng đăng nhập, quản lý tài khoản và bảo mật phiên.</li>
+          <li>Tải dữ liệu đề thi từ Firebase và hiển thị nội dung luyện thi.</li>
+          <li>Lưu lịch sử làm bài, cấu hình người dùng và cải thiện trải nghiệm học tập.</li>
+          <li>Hiển thị quảng cáo để duy trì vận hành ứng dụng.</li>
+          <li>Cung cấp giải thích AI cho bài làm (khi tính năng AI được bật).</li>
+        </ul>
+
+        <h2>3. Dịch vụ bên thứ ba</h2>
+        <p>Ứng dụng có thể sử dụng các dịch vụ bên thứ ba sau:</p>
+        <ul>
+          <li>Firebase Authentication</li>
+          <li>Cloud Firestore</li>
+          <li>Firebase App Check</li>
+          <li>Google Sign-In</li>
+          <li>Google Mobile Ads (AdMob)</li>
+        </ul>
+
+        <h2>4. Quyền truy cập thiết bị</h2>
+        <p>Ứng dụng có thể yêu cầu một số quyền sau (tùy chức năng bạn sử dụng):</p>
+        <ul>
+          <li><strong>Internet:</strong> kết nối Firebase, đồng bộ nội dung đề, đăng nhập và quảng cáo.</li>
+          <li><strong>Ảnh/Thư viện:</strong> chọn ảnh đại diện.</li>
+          <li><strong>Camera:</strong> chụp ảnh đại diện (nếu bạn dùng chức năng này).</li>
+        </ul>
+        <p>Ứng dụng <strong>không</strong> yêu cầu quyền vị trí chính xác để hoạt động cốt lõi.</p>
+
+        <h2>5. Lưu trữ và thời gian lưu dữ liệu</h2>
+        <ul>
+          <li>Dữ liệu học tập/thiết lập thường được lưu cục bộ trên thiết bị cho đến khi bạn xóa dữ liệu ứng dụng hoặc gỡ cài đặt.</li>
+          <li>Dữ liệu tài khoản (nếu đăng nhập) được lưu theo vòng đời tài khoản trên Firebase, trừ khi bạn yêu cầu/xử lý xóa tài khoản.</li>
+        </ul>
+
+        <h2>6. Xóa tài khoản và dữ liệu</h2>
+        <p>
+          Bạn có thể xóa tài khoản ngay trong ứng dụng (màn hình Tài khoản).
+          Khi xóa tài khoản, ứng dụng sẽ cố gắng xóa dữ liệu liên quan theo
+          luồng kỹ thuật hiện có.
+        </p>
+        <p>
+          Hướng dẫn chi tiết (cách gửi yêu cầu ngoài app, dữ liệu xóa/giữ và thời gian lưu giữ):
+          <a href="account-deletion.html">Xóa tài khoản & dữ liệu</a>.
+        </p>
+        <p>Nếu cần hỗ trợ xóa dữ liệu bổ sung, liên hệ: <a href="mailto:ducduy10k@gmail.com">ducduy10k@gmail.com</a></p>
+
+        <h2>7. Chia sẻ dữ liệu</h2>
+        <p>
+          Chúng tôi không bán dữ liệu cá nhân của bạn. Dữ liệu chỉ được chia sẻ
+          với bên thứ ba trong phạm vi cần thiết để cung cấp chức năng nêu trong
+          chính sách này (ví dụ: xác thực, lưu trữ dữ liệu, quảng cáo).
+        </p>
+
+        <h2>8. Bảo mật dữ liệu</h2>
+        <p>
+          Chúng tôi áp dụng các biện pháp hợp lý về kỹ thuật và tổ chức để bảo vệ
+          dữ liệu khỏi truy cập trái phép, mất mát hoặc lạm dụng. Tuy nhiên,
+          không có hệ thống nào đảm bảo an toàn tuyệt đối 100%.
+        </p>
+
+        <h2>9. Đối tượng người dùng</h2>
+        <p>
+          Ứng dụng hướng tới người học ôn thi THPT. Nếu bạn là phụ huynh/người
+          giám hộ và có yêu cầu liên quan dữ liệu của trẻ, vui lòng liên hệ qua
+          email hỗ trợ.
+        </p>
+
+        <h2>10. Thay đổi chính sách</h2>
+        <p>
+          Chính sách này có thể được cập nhật theo thời gian để phản ánh thay đổi
+          về tính năng hoặc yêu cầu pháp lý. Phiên bản mới nhất sẽ được công bố
+          tại URL chính sách quyền riêng tư của ứng dụng.
+        </p>
+
+        <h2>11. Liên hệ</h2>
+        <p>Mọi câu hỏi về quyền riêng tư, vui lòng liên hệ:</p>
+        <ul>
+          <li>Email hỗ trợ: <a href="mailto:ducduy10k@gmail.com">ducduy10k@gmail.com</a></li>
+        </ul>
+
+        <p class="footer">© 2026 Luyện thi THPT</p>
+      </article>
+    </main>
+  </body>
+</html>
